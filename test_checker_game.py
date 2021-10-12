@@ -80,6 +80,13 @@ class Tests(TestCase):
         game.handle_events()
         self.assertTrue(True)
 
+    def test_game_handle_mouse_event(self):
+        x_size = 775
+        y_size = 800
+        game = Game("Checkers 100", x_size, y_size, "1.png", 120)
+        game.handle_mouse_event(pygame.MOUSEBUTTONDOWN, (0, 0))
+        self.assertTrue(True)
+
 if __name__ == '__main__':
     cover = coverage()
     cover.erase()
